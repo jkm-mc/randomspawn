@@ -1,4 +1,12 @@
-name: myplugin
+name: randomspawn
 version: ${project.version}
-author: Your Name
-main: dev.jkm.myplugin.MyPlugin
+author: jkm
+main: dev.jkm.randomspawn.RandomSpawn
+api-version: 1.14
+
+softdepend: [Towny]
+
+commands:
+  randomspawn:
+    description: Teleports an operator to a random spawn location.
+    usage: /randomspawn

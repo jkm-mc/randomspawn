@@ -1,24 +1,39 @@
-# mc-spigot-template
+# randomspawn
 
-This is a template for creating a Spigot plugin for Minecraft.
+This Spigot plugin sets a random spawn location for players on their first join, within a configurable area. A whitelist of blocks can also be provided to ensure the player spawns on blocks you like.
 
-## Installation
-
-1. Download the latest release from the [releases page](https://github.com/jkm-mc/mc-myplugin/releases).
-2. Place the downloaded JAR file in your server's `plugins` directory.
+If Towny is enabled, it's possible to set a minimum distance between random spawns and town blocks, so players don't spawn too close to towns.
 
 ## Configuration
 
-_Add information about plugin configuration here._
+You can configure the plugin by editing the `config.yml` files
+
+### `config.yml`
+
+```yaml
+# The bounds of the random spawn area.
+minX: -2000
+minZ: -2000
+maxX: 2000
+maxZ: 2000
+
+# Blocks that random spawns can be on.
+spawnBlocks:
+  - GRASS_BLOCK
+  - DIRT
+  - STONE
+  - SAND
+  - GRAVEL
+
+# The minimum allowed distance between random spawns and town blocks, if Towny is installed.
+minimumTownyDistance: 500
+```
+
+## Installation
+
+1. Download the latest release from the [releases page](https://github.com/jameskmonger/mc-randomspawn/releases).
+2. Place the downloaded JAR file in your server's `plugins` directory.
 
 ## Commands
 
-_Add information about plugin commands here._
-
-- `/somecommand` - Command description.
-
-## Development
-
-You can run `mvn clean package` to build the plugin JAR file. The JAR file will be placed in the `target` directory.
-
-The version in `pom.xml` will be automatically applied to your `plugin.yml`. Changes to `pom.xml` will result in a Github Release being published.
+- `/randomspawn` - Teleports and sets the player to a random spawn location (operator only).

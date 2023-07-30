@@ -1,0 +1,23 @@
+﻿#####
+# Config file for randomspawn
+#
+# made by jkm
+# https://github.com/jameskmonger/
+#####
+
+# The bounds of the random spawn area.
+minX: -2000
+minZ: -2000
+maxX: 2000
+maxZ: 2000
+
+# Blocks that random spawns can be on.
+spawnBlocks:
+  - GRASS_BLOCK
+  - DIRT
+  - STONE
+  - SAND
+  - GRAVEL
+
+# The minimum allowed distance between random spawns and town blocks, if Towny is installed.
+minimumTownyDistance: 500
