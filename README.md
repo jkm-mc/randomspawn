@@ -4,6 +4,11 @@ This Spigot plugin sets a random spawn location for players on their first join,
 
 If Towny is enabled, it's possible to set a minimum distance between random spawns and town blocks, so players don't spawn too close to towns.
 
+## Installation
+
+1. Download the latest release from the [releases page](https://github.com/jkm-mc/randomspawn/releases).
+2. Place the downloaded JAR file in your server's `plugins` directory.
+
 ## Configuration
 
 You can configure the plugin by editing the `config.yml` files
@@ -28,11 +33,6 @@ spawnBlocks:
 # The minimum allowed distance between random spawns and town blocks, if Towny is installed.
 minimumTownyDistance: 500
 ```
-
-## Installation
-
-1. Download the latest release from the [releases page](https://github.com/jameskmonger/mc-randomspawn/releases).
-2. Place the downloaded JAR file in your server's `plugins` directory.
 
 ## Commands
 
