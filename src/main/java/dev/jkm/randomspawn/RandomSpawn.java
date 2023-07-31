@@ -211,10 +211,18 @@ public class RandomSpawn extends JavaPlugin implements Listener {
      * @return true if the location is far enough away from a town block
      */
     private boolean isLocationFarEnoughFromTown(Location location) {
+        // If Towny is not loaded, we don't need to check
         if (!isTownyLoaded()) {
             return true;
         }
 
+        // If the location is not in the wilderness, we don't need to check
+        if (TownyAPI.getInstance().isWilderness(location) == false) {
+            return false;
+        }
+
+        // Go through all town blocks and check if the location is within the minimum distance
+        // TODO (jkm) find a better way to do this
         for (TownBlock townBlock : TownyAPI.getInstance().getTownBlocks()) {
             try {
                 // TODO we should check that the town block is in the same world as the location
