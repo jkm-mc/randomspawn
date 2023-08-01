@@ -36,4 +36,4 @@ minimumTownyDistance: 500
 
 ## Commands
 
-- `/randomspawn` - Teleports and sets the player to a random spawn location (operator only).
+- `/randomspawn` - Teleports and sets the player to a random spawn location (requires `randomspawn.command.randomspawn`)

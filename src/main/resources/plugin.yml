@@ -10,3 +10,4 @@ commands:
   randomspawn:
     description: Teleports an operator to a random spawn location.
     usage: /randomspawn
+    permission: randomspawn.command.randomspawn
